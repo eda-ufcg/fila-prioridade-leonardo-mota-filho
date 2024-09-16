@@ -1,8 +1,8 @@
 # Identificação
 
-* Nome: 
-* Email (@ccc): 
-* Matrícula: 
+* Nome: Leonardo Mota Meira Filho
+* Email (@ccc): leonardo.mota.meira.filho@ccc.ufcg.edu.br
+* Matrícula: 123110635
 
 # Roteiro: Fila de Prioridade
 
