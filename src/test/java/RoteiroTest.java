@@ -14,7 +14,6 @@ public class RoteiroTest {
 		estrategias[1] = insereFinal;
 		estrategias[2] = insertion;
 
-
 		// 1, 2, 3, 4, 5
 		for (FilaPrioridade fila : estrategias) {
 			fila.add("a", 1);

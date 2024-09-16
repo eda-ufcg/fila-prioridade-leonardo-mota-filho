@@ -9,12 +9,25 @@ public class InsereFinalFilaPrioridade implements FilaPrioridade {
 	}
 	
 	// criar um Pair e adicionar no fim da fila
-	public void add(String elemento, int prioridade) {}
+	public void add(String elemento, int prioridade) {
+		fila.add(new Pair(elemento,prioridade));
+	}
 
 
 	// buscar pelo elemento de maior prioridade na fila.
 	public String removeNext() {
-		return "";
+		if(fila.isEmpty()){
+			return "";
+		} else{
+			Pair max = new Pair("",-1);
+			for(Pair i : fila){
+				if(i.getPrioridade() > max.getPrioridade()){
+					max = i;
+				}
+			}
+			return max.getElemento();
+		}
+
 	}
 
 }
