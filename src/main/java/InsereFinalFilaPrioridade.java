@@ -19,12 +19,13 @@ public class InsereFinalFilaPrioridade implements FilaPrioridade {
 		if(fila.isEmpty()){
 			return "";
 		} else{
-			Pair max = new Pair("",-1);
+			Pair max = fila.get(0);
 			for(Pair i : fila){
 				if(i.getPrioridade() > max.getPrioridade()){
 					max = i;
 				}
 			}
+			fila.remove(max);
 			return max.getElemento();
 		}
 

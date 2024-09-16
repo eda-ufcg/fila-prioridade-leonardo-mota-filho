@@ -20,8 +20,8 @@ public class InsereOrdenadoFilaPrioridade implements FilaPrioridade {
 		this.size++;
 		this.tail = (this.tail+1)%fila.length;
 		this.fila[this.tail] = new Pair(elemento,prioridade);
-		for(int i = 0;i<this.size;i++){
-			if(fila[(tail-i-1)%fila.length].getPrioridade() > fila[(tail-i)%fila.length].getPrioridade()){
+		for(int i = 0;i<this.size-1;i++){
+			if(fila[(tail-i-1+fila.length)%fila.length].getPrioridade() > fila[(tail-i+fila.length)%fila.length].getPrioridade()){
 				break;
 			}
 			Pair temp = fila[(tail-i)%fila.length];
@@ -37,13 +37,13 @@ public class InsereOrdenadoFilaPrioridade implements FilaPrioridade {
 		if(this.size == 0){
 			return "";
 		}
+		String elem = fila[head].getElemento();
 		if(this.head == this.tail){
 			this.head = -1;
 			this.tail = -1;
 		}
-		String elem = fila[head].getElemento();
+		this.head = (this.head+1)%fila.length;
 		this.size--;
-		this.head++;
 		return elem;
 	}
 
